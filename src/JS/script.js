@@ -85,7 +85,7 @@ function animateInteraction() {
     currentX += (mouseX - currentX) * 0.05;
     currentY += (mouseY - currentY) * 0.05;
 
-    const rotateDeg = currentX * 25;
+    const rotateDeg = currentX * 30;
     const translateX = currentX * 25;
     const translateY = currentY * 25;
 
