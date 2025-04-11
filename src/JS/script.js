@@ -68,12 +68,18 @@ document.addEventListener('mousemove', (e) => {
 });
 
 document.addEventListener('touchmove', (e) => {
-  if (e.touches && e.touches.length > 0) {
+  if (e.touches.length > 0) {
     const touch = e.touches[0];
-    mouseX = (touch.clientX / window.innerWidth - 0.5) * 2;
-    mouseY = (touch.clientY / window.innerHeight - 0.5) * 2;
+    const touchX = (touch.clientX / window.innerWidth - 0.5) * 2;
+    const touchY = (touch.clientY / window.innerHeight - 0.5) * 2;
+
+    mouseX = touchX;
+    mouseY = touchY;
   }
-});
+
+  e.preventDefault(); // impede o scroll padrão enquanto desliza
+}, { passive: false });
+
 
 function animateInteraction() {
     currentX += (mouseX - currentX) * 0.05;
