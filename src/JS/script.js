@@ -67,6 +67,14 @@ document.addEventListener('mousemove', (e) => {
     mouseY = (e.clientY / window.innerHeight - 0.5) * 2;
 });
 
+document.addEventListener('touchmove', (e) => {
+  if (e.touches && e.touches.length > 0) {
+    const touch = e.touches[0];
+    mouseX = (touch.clientX / window.innerWidth - 0.5) * 2;
+    mouseY = (touch.clientY / window.innerHeight - 0.5) * 2;
+  }
+});
+
 function animateInteraction() {
     currentX += (mouseX - currentX) * 0.05;
     currentY += (mouseY - currentY) * 0.05;
