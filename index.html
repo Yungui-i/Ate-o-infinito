@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Até o infinito</title>
+  <link rel="stylesheet" href="./src/css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="./src/Imagens/favicon-32x32.png">
+  <link rel="stylesheet" href="src/css/responsivo.css"
+</head>
+
+<body>
+  <div id="container">
+    <svg id="rose" viewBox="0 0 200 300" xmlns="http://www.w3.org/2000/svg">
+
+
+      <path id="stem" d="M100,130
+C85,180 115,220 90,250
+C75,270 110,280 100,290" />
+
+
+
+      <defs>
+        <!-- Gradientes -->
+        <linearGradient id="petalGradient" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#ff4d6d" />
+          <stop offset="100%" stop-color="#8b001f" />
+        </linearGradient>
+        <linearGradient id="leafGradient" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#7fffd4" />
+          <stop offset="100%" stop-color="#3cb371" />
+        </linearGradient>
+        <linearGradient id="stemGradient" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#66cdaa" />
+          <stop offset="100%" stop-color="#2e8b57" />
+        </linearGradient>
+      </defs>
+
+      
+      <g id="petals" transform="translate(10, 10)">
+        <path class="petal" id="petal1"
+          d="M100,70 C80,40 40,90 70,130 C100,160 140,120 130,90 C120,60 110,60 100,70 Z" />
+        <path class="petal" id="petal2"
+          d="M98,78 C80,60 55,100 75,125 C95,140 125,115 115,100 C110,85 105,80 98,78 Z" />
+
+        <path class="petal" id="petal4" d="M100,88 C90,93 85,115 100,120 C115,115 110,95 100,88 Z" />
+        <path class="petal" id="petal5" d="M102,93 C95,100 95,118 102,118 C110,118 110,100 102,93 Z" />
+      </g>
+
+      
+      <path class="leaf" id="leaf1" d="M97,158 C77,148 65,185 97,172 Z" />
+      <path class="leaf" id="leaf2" d="M97,158 C117,148 129,185 97,172 Z" />
+
+
+    </svg>
+
+    <div id="love-text">Vou te amar até essa aqui morrer</div>
+    <canvas id="particles"></canvas>
+  </div>
+
+  <script src="./src/JS/script.js"></script>
+</body>
+
+</html>
